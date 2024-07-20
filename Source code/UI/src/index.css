@@ -1,0 +1,32 @@
+/* Add this to your main CSS file or a new CSS file */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar {
+  z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.sidebar-container {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #343a40;
+  color: white;
+  min-height: 100vh; /* Full viewport height */
+  width: 250px; /* Fixed width for the sidebar */
+  position: fixed;
+  top: 56px; /* Height of the navbar to avoid overlap */
+  left: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.main-content {
+  margin-left: 250px; /* Same as sidebar width */
+  padding: 1rem;
+  width: calc(100% - 250px); /* Full width minus sidebar width */
+}
